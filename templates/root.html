@@ -3,10 +3,15 @@
 {% block title %}Spletni forenzični program{% endblock title %}
 
 {% block specifika %}
-    <h1>Spletni forenzični program</h1>
-    <p>Vnesi DNK</p>
+<h1>Spletni forenzični program</h1>
+<br><br>
+<div class="row">
     <form method="post" action="/">
-        <textarea name="dna">Tukaj vnesi dna string</textarea>
-        <button type="submit">Pošlji</button>
+        <div class="col-lg-8">
+            <p>Vnesi DNK</p>
+            <textarea class="form-control" name="dna" placeholder="Tukaj vnesi dna string"></textarea>
+            <button class="btn btn-info btn-lg" type="submit">Pošlji</button>
+        </div>
     </form>
+</div>
 {% endblock specifika %}
