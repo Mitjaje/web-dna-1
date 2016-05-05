@@ -30,13 +30,13 @@ def get_hair_color(dna):
     for barva in barva_las.keys():
         if (dna.find(barva_las[barva]) != -1):
             return barva
-    return "Neznana"
+    return "neznana"
 
 # Dodaj funkcije za posamezne lastnosti
 
 def get_person(hair_color, sex):
     # logika
-    return "Neznan"
+    return "neznan"
 
 def za_referenco(): # na koncu to pobrisemo
     if (dna.find(spol["moski"]) != -1 and dna.find(rasa["belec"]) != -1 and dna.find(barva_las["korencek"]) != -1 and dna.find(barva_oci["rjava"]) != -1) and dna.find(oblika_obraza["okrogel"]) != -1:
