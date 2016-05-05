@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Spletni forenzični program{% endblock title %}
+
+{% block specifika %}
+    <h1>Spletni forenzični program - analiza</h1>
+    <p>{{dnk}}</p>
+    <hr>
+    <p>Lastnosti osumljenca:</p>
+    <ul>
+        <li>Lasje: {{lasje}}</li>
+        <li>Rasa: {{rasa}}</li>
+    </ul>
+    <p>Osumljenec: {{osumljenec}}</p>
+{% endblock specifika %}

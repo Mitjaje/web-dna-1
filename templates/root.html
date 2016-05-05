@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Spletni forenzični program{% endblock title %}
+
+{% block specifika %}
+    <h1>Spletni forenzični program</h1>
+    <p>Vnesi DNK</p>
+    <form method="post" action="/">
+        <textarea name="dna">Tukaj vnesi dna string</textarea>
+        <button type="submit">Pošlji</button>
+    </form>
+{% endblock specifika %}
