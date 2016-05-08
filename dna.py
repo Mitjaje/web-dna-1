@@ -32,11 +32,39 @@ def get_hair_color(dna):
             return barva
     return "neznana"
 
-# Dodaj funkcije za posamezne lastnosti
+def get_face_shape(dna):
+    for oblika in oblika_obraza.keys():
+        if (dna.find(oblika_obraza[oblika]) != -1):
+            return oblika
+    return "neznana"
 
-def get_person(hair_color, sex):
-    # logika
-    return "neznan"
+def get_eyes_colour(dna):
+    for barva in barva_oci.keys():
+        if (dna.find(barva_oci[barva]) != -1):
+            return barva
+    return "neznana"
+
+def get_sex(dna):
+    for sex in spol.keys():
+        if (dna.find(spol[sex]) != -1):
+            return sex
+    return "neznana"
+
+def get_race(dna):
+    for race in rasa.keys():
+        if (dna.find(rasa[race]) != -1):
+            return race
+    return "neznana"
+
+def get_person(dna):
+    if get_sex(dna) == "moski" and get_race(dna) == "belec" and get_hair_color(dna) ==  "korencek" and get_eyes_colour(dna) == "rjava" and get_face_shape(dna) == "okrogel":
+        return "Žiga"
+    elif  get_sex(dna) == "moski" and get_race(dna) == "belec" and get_hair_color(dna) ==  "crna" and get_eyes_colour(dna) == "modra" and get_face_shape(dna) == "ovalen":
+        return "Matej"
+    elif get_sex(dna) == "moski" and get_race(dna) == "belec" and get_hair_color(dna) ==  "rjava" and get_eyes_colour(dna) == "zelena" and get_face_shape(dna) == "kvadraten":
+        return "Miha"
+    else:
+        return "Krivca ni med osumljenci.."
 
 def za_referenco(): # na koncu to pobrisemo
     if (dna.find(spol["moski"]) != -1 and dna.find(rasa["belec"]) != -1 and dna.find(barva_las["korencek"]) != -1 and dna.find(barva_oci["rjava"]) != -1) and dna.find(oblika_obraza["okrogel"]) != -1:

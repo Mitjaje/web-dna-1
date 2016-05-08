@@ -40,10 +40,13 @@ class MainHandler(BaseHandler):
         vpisani_dnk = self.request.get("dna")
         tekst = "Vhodni DNK: {}".format(vpisani_dnk)
         izhodni_podatki = {
-            "dnk" : tekst,
+            "dnk" : dna,
             "lasje" : dna.get_hair_color(vpisani_dnk),
-            "rasa" : "aaa",
-            "osumljenec" : dna.get_person("aaa", "bbb")
+            "oblika_obraza" : dna.get_face_shape(vpisani_dnk),
+            "barva_oci"  :  dna.get_eyes_colour(vpisani_dnk),
+            "spol"  : dna.get_sex(vpisani_dnk),
+            "rasa" : dna.get_race(vpisani_dnk),
+            "osumljenec" : dna.get_person(vpisani_dnk)
         }
         self.render_template("analiza.html", params=izhodni_podatki)
 
